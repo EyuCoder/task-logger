@@ -9,11 +9,7 @@ DB_PSWD=os.getenv('DB_PSWD') or 'AKIAZE47H5KWAN3BUIFP'
 DB_NAME=os.getenv('DB_NAME') or 'task_logger'
 DB_HOST=os.getenv('DB_HOST') or 'task-db.cfjogmk4lxb5.us-west-2.rds.amazonaws.com'
 
-db = pymysql.connect(host=DB_HOST, 
-                                                                                 user=DB_USER, 
-                                                                                 password=DB_PSWD, 
-                                                                                 database=DB_NAME, 
-                                                                                 cursorclass=pymysql.cursors.DictCursor, port=8080)
+db = pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PSWD, database=DB_NAME, cursorclass=pymysql.cursors.DictCursor, port=80)
 cursor = db.cursor()
 
 # Create a new task
