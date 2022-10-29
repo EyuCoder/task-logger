@@ -13,7 +13,7 @@ db = pymysql.connect(host=DB_HOST,
                                                                                  user=DB_USER, 
                                                                                  password=DB_PSWD, 
                                                                                  database=DB_NAME, 
-                                                                                 cursorclass=pymysql.cursors.DictCursor)
+                                                                                 cursorclass=pymysql.cursors.DictCursor, port=8080)
 cursor = db.cursor()
 
 # Create a new task
